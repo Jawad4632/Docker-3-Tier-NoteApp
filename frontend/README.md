@@ -1,16 +1,71 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Frontend Application
 
-Currently, two official plugins are available:
+This is the React frontend application for the 3-Tier Application project.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## React Compiler
+These instructions will help you run the React app locally or using Docker.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (preferably version 16 or above)
+- npm (comes with Node.js)
+- Docker (optional, for containerized deployment)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running Locally
+
+1. Clone the repository:
+
+```
+git clone <your-repo-url>
+
+```
+2. Change directory to the frontend folder:
+```
+
+cd frontend
+
+```
+3. Install dependencies:
+```
+
+npm install
+
+```
+4. Run the app in development mode:
+```
+
+npm run dev
+
+```
+5. Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+The app supports hot module replacement, so changes you make will be reflected instantly in the browser.
+
+## Dockerizing the React App
+
+If you want to run the React app inside a Docker container, follow these steps:
+
+1. Build the Docker image with your backend API URL as a build argument:
+```
+
+docker build --build-arg VITE_API_BASE_URL=http://localhost:8080/api -t my-vite-app .
+
+```
+2. Run the Docker container, exposing port 80:
+```
+
+docker run -p 80:80 my-vite-app
+
+```
+3. Access the app by opening [http://localhost](http://localhost) in your browser.
+
+## Notes
+
+- If you want to run the backend locally before starting the frontend, please refer to the backend README for instructions on setting up the Spring Boot server and database.
+- Ensure your backend is running and accessible at the URL you provide in the Docker build argument or in your frontend environment variables.
+
+---
+
+Feel free to contribute or raise issues if you face any trouble running the app.
