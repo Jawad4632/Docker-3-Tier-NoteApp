@@ -23,7 +23,11 @@ POSTGRES_PASSWORD=<password>
 # Then run:
 
 ./gradlew bootRun
+```
 
+```
+# to run with your configuration
+java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/<db_name> -Dspring.datasource.username=<user-name> -Dspring.datasource.password=<password> -jar NoteApp.jar
 ```
 # Docker Setup
 ## Build Information
