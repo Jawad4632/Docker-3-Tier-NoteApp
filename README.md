@@ -3,6 +3,8 @@
 
 A full-stack note-taking application with React frontend, Spring Boot backend, and PostgreSQL database, fully containerized with Docker.
 
+<img width="811" height="388" alt="Screenshot 2025-11-10 141058" src="https://github.com/user-attachments/assets/da8b1d53-0700-4581-82e4-c4f655316828" />
+
 ##  Prerequisites
 
 - Docker (version 20.10 or higher)
